@@ -60,7 +60,12 @@ class WeekCardBox extends LitElement {
           <div class="time-to-complete">2 hours to complete</div>
           <div class="headline">Misconceptions about happiness</div>
           <div class="description">
-
+            In this module, you will learn what it means to be happy and why
+            pursuing happiness is not a pointless endeavor. Dr. Santos addresses
+            how our minds lie to us and how the science shows that our
+            misconceptions about money, grades, and social media are holding us
+            back from implementing the techniques studied in positive
+            psychology.
           </div>
         </div>
       </div>
