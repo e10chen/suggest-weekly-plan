@@ -1,4 +1,5 @@
 import { LitElement, html, css } from "lit";
+import "./see-all-option.js"
 
 class WeekCardBox extends LitElement {
   static properties = {
@@ -13,7 +14,7 @@ class WeekCardBox extends LitElement {
     }
 
     .week-number {
-      width: 50%;
+      width: 30%;
       display: inline-block;
       text-align: center;
     }
@@ -67,6 +68,7 @@ class WeekCardBox extends LitElement {
             back from implementing the techniques studied in positive
             psychology.
           </div>
+          <see-all-option></see-all-option>
         </div>
       </div>
     `;
