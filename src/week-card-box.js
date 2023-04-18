@@ -1,6 +1,5 @@
 import { LitElement, html, css } from "lit";
 
-
 class WeekCardBox extends LitElement {
   static properties = {
     header: { type: String },
@@ -8,13 +7,12 @@ class WeekCardBox extends LitElement {
       type: Boolean,
       reflect: true,
     },
-    weeknumber: {type: String },
-    timetocomplete: {type: String },
-    headline: {type: String},
-    description: {type: String},
-    videoreadingquiztitle: {type: String}
-
-
+    weeknumber: { type: String },
+    timetocomplete: { type: String },
+    headline: { type: String },
+    description: { type: String },
+    videoreadingquiztitle: { type: String },
+    textseeall: {type: String }
   };
 
   static styles = css`
@@ -85,13 +83,15 @@ class WeekCardBox extends LitElement {
     this.weeknumber = "1";
     this.timetocomplete = "4 hours to complete";
     this.headline = "Something idk";
-    this.description = "In this module, you will learn what it means to be happy and why pursuing happiness is not a pointless endeavor. Dr. Santos addresses how our minds lie to us and how the science shows that our misconceptions about money, grades, and social media are holding us back from implementing the techniques studied in positive psychology.";
+    this.description =
+      "In this module, you will learn what it means to be happy and why pursuing happiness is not a pointless endeavor. Dr. Santos addresses how our minds lie to us and how the science shows that our misconceptions about money, grades, and social media are holding us back from implementing the techniques studied in positive psychology.";
     this.videoreadingquiztitle = "9 videos (Total 55 min). 3 reading, 1 quiz";
+    this.opened = false;
   }
 
   toggleEvent(e) {
     const state =
-      this.shadowRoot.querySelector("see-all-button").getAttribute("open") ===
+      this.shadowRoot.querySelector(".see-all-button").getAttribute("open") ===
       ""
         ? true
         : false;
@@ -115,6 +115,14 @@ class WeekCardBox extends LitElement {
     });
   }
 
+  seealltext(opened) {
+    if (this.opened === true) {
+      return "See less";
+    } else {
+      return "See all";
+    }
+  }
+
   render() {
     return html`
       <div class="week-card">
@@ -126,9 +134,7 @@ class WeekCardBox extends LitElement {
         <div class="syllabus-module">
           <div class="time-to-complete">${this.timetocomplete}</div>
           <div class="headline">${this.headline}</div>
-          <div class="description">
-           ${this.description}
-          </div>
+          <div class="description">${this.description}</div>
           <div class="video-reading-quiz-see-all">
             <div class="video-reading-quiz-heading">
               <div class="video-reading-quiz-title">
@@ -141,7 +147,7 @@ class WeekCardBox extends LitElement {
                 .open=${this.opened}
                 @toggle="${this.toggleEvent}"
               >
-                <summary class="button-text">See all</summary>
+                <summary class="button-text">${this.seealltext(this.opened)}</summary>
                 <div class="list-of-video">
                   <div class="video-title">reeeeee</div>
                   <div class="video-title">reeeeee</div>
