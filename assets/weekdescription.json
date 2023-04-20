@@ -1,8 +1,4 @@
-export default async function handler(request, res) {
-
-  console.log(request.query.search);
-
-const weekdescription = [
+[
   {
       "weeknumber": "1",
       "timetocomplete": "4 hours to complete",
@@ -14,15 +10,14 @@ const weekdescription = [
     "weeknumber": "2",
     "timetocomplete": "3 hours to complete",
     "headline": "Prompt 2",
-    "description": "Do this.",
+    "description": "Do it",
     "videoreadingquiztitle": "8 videos (Total 55 min). 5 reading, 2 quiz"
-},
-
-];
-res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
-res.setHeader("Access-Control-Allow-Credentials", "true");
-res.setHeader("Access-Control-Allow-Origin", "*");
-res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS,PATCH,DELETE,POST,PUT");
-res.setHeader("Access-Control-Allow-Headers", "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version");
-res.json(weekdescription);
-}
+  },
+  {
+  "weeknumber": "3",
+  "timetocomplete": "2 hours to complete",
+  "headline": "Prompt 3",
+  "description": "AHHHHHH.",
+  "videoreadingquiztitle": "10 videos (Total 55 min). 6 reading, 1 quiz"
+  }
+]

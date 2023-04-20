@@ -16,6 +16,11 @@ class WeekCardBox extends LitElement {
   };
 
   static styles = css`
+    :host{
+      display: block;
+      justify-content: left;
+    }
+
     .week-card {
       display: flex;
       height: 100px
@@ -23,13 +28,13 @@ class WeekCardBox extends LitElement {
     }
 
     .week-number {
-      width: 30%;
+      width: 400px;
       display: inline-block;
       text-align: center;
     }
 
     .syllabus-module {
-      flex-grow: 1;
+      width: 2000px;
       padding-bottom: 20px;
       border-bottom: 1px solid red;
     }
