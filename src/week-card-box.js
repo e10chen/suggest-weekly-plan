@@ -1,4 +1,5 @@
 import { LitElement, html, css } from "lit";
+import "./video-list-title";
 
 class WeekCardBox extends LitElement {
   static properties = {
@@ -12,7 +13,8 @@ class WeekCardBox extends LitElement {
     headline: { type: String },
     description: { type: String },
     videoreadingquiztitle: { type: String },
-    textseeall: {type: String }
+    textseeall: { type: String },
+    videolisttitle: { type: Array },
   };
 
   static styles = css`
@@ -69,15 +71,6 @@ class WeekCardBox extends LitElement {
       cursor: pointer;
     }
 
-    .video-title {
-      margin: 10px;
-    }
-
-    .list-of-video {
-      margin-top: 10px;
-      border-top: 1px solid red;
-      border-bottom: 1px solid red;
-    }
 
   `;
 
@@ -92,6 +85,8 @@ class WeekCardBox extends LitElement {
       "In this module, you will learn what it means to be happy and why pursuing happiness is not a pointless endeavor. Dr. Santos addresses how our minds lie to us and how the science shows that our misconceptions about money, grades, and social media are holding us back from implementing the techniques studied in positive psychology.";
     this.videoreadingquiztitle = "9 videos (Total 55 min). 3 reading, 1 quiz";
     this.opened = false;
+    this.videolisttitle = [];
+    this.updateVideoTitle();
   }
 
   toggleEvent(e) {
@@ -128,6 +123,21 @@ class WeekCardBox extends LitElement {
     }
   }
 
+  updateVideoTitle() {
+    //const address = "../api/video";
+    const address = "../assets/video.json";
+    fetch(address)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        return [];
+      })
+      .then((data) => {
+        this.videolisttitle = data;
+      });
+  }
+
   render() {
     return html`
       <div class="week-card">
@@ -152,13 +162,20 @@ class WeekCardBox extends LitElement {
                 .open=${this.opened}
                 @toggle="${this.toggleEvent}"
               >
-                <summary class="button-text">${this.seealltext(this.opened)}</summary>
-                <div class="list-of-video">
-                  <div class="video-title">reeeeee</div>
-                  <div class="video-title">reeeeee</div>
-                  <div class="video-title">reeeeee</div>
-                  <div class="video-title">reeeeee</div>
-                  <div class="video-title">reeeeee</div>
+                <summary class="button-text">
+                  ${this.seealltext(this.opened)}
+                </summary>
+                <div class="wrapper">
+                  ${this.videolisttitle.map(
+                    (videolisttitle) => html`
+                      <div class="item">
+                        <video-list-title
+                          videoicon="${videolisttitle.videoicon}"
+                          videotitle="${videolisttitle.videotitle}"
+                        ></video-list-title>
+                      </div>
+                    `
+                  )}
                 </div>
               </details>
             </div>
