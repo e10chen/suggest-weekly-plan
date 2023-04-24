@@ -1,5 +1,4 @@
 import { LitElement, html, css } from "lit";
-import "./video-list-title";
 
 class WeekCardBox extends LitElement {
   static properties = {
@@ -8,13 +7,18 @@ class WeekCardBox extends LitElement {
       type: Boolean,
       reflect: true,
     },
-    weeknumber: { type: String },
-    timetocomplete: { type: String },
+    weeknumber: { type: Number },
+    timetocomplete: { type: Number },
     headline: { type: String },
     description: { type: String },
-    videoreadingquiztitle: { type: String },
     textseeall: { type: String },
-    videolisttitle: { type: Array },
+    numberofvideos: { type: Number },
+    numberofreadings: { type: Number },
+    numberofquizzes: { type: Number },
+    totalminutecompletion: { type: Number },
+    videoArray: { type: Array },
+    readingArray: { type: Array },
+    quizArray: { type: Array },
   };
 
   static styles = css`
@@ -76,6 +80,23 @@ class WeekCardBox extends LitElement {
 
     }
 
+    .number-of-videos {
+      padding: 10px;
+      margin-top: 10px;
+      border-top: 1px solid red;
+      border-bottom: 1px solid red;
+    }
+
+    .number-of-readings {
+      padding: 10px;
+      border-bottom: 1px solid red;
+    }
+
+    .number-of-quizzes{
+      padding: 10px;
+      border-bottom: 1px solid red;
+    }
+
 
   `;
 
@@ -84,14 +105,18 @@ class WeekCardBox extends LitElement {
     this.header = "My app";
     this.opened = false;
     this.weeknumber = "1";
-    this.timetocomplete = "4 hours to complete";
+    this.timetocomplete = "4";
     this.headline = "Something idk";
     this.description =
       "In this module, you will learn what it means to be happy and why pursuing happiness is not a pointless endeavor. Dr. Santos addresses how our minds lie to us and how the science shows that our misconceptions about money, grades, and social media are holding us back from implementing the techniques studied in positive psychology.";
-    this.videoreadingquiztitle = "9 videos (Total 55 min). 3 reading, 1 quiz";
     this.opened = false;
-    this.videolisttitle = [];
-    this.updateVideoTitle();
+    this.numberofvideos = "4 ";
+    this.numberofreadings = "10 ";
+    this.numberofquizzes = "1 ";
+    this.totalminutecompletion = "55 ";
+    this.videoArray = [];
+    this.readingArray = [];
+    this.quizArray = [];
   }
 
   toggleEvent(e) {
@@ -128,21 +153,6 @@ class WeekCardBox extends LitElement {
     }
   }
 
-  updateVideoTitle() {
-    //const address = "../api/video";
-    const address = "../assets/video.json";
-    fetch(address)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        return [];
-      })
-      .then((data) => {
-        this.videolisttitle = data;
-      });
-  }
-
   render() {
     return html`
       <div class="week-card">
@@ -152,13 +162,17 @@ class WeekCardBox extends LitElement {
         </div>
 
         <div class="syllabus-module">
-          <div class="time-to-complete">${this.timetocomplete}</div>
+          <div class="time-to-complete">
+            ${this.timetocomplete} hours to complete
+          </div>
           <div class="headline">${this.headline}</div>
           <div class="description">${this.description}</div>
           <div class="video-reading-quiz-see-all">
             <div class="video-reading-quiz-heading">
               <div class="video-reading-quiz-title">
-                ${this.videoreadingquiztitle}
+                ${this.numberofvideos} videos (Total
+                ${this.totalminutecompletion} min) ${this.numberofreadings}
+                reading, ${this.numberofquizzes} quiz
               </div>
             </div>
             <div class="space-between-heading-and-button">
@@ -170,17 +184,16 @@ class WeekCardBox extends LitElement {
                 <summary class="button-text">
                   ${this.seealltext(this.opened)}
                 </summary>
-                <div class="wrapper">
-                  ${this.videolisttitle.map(
-                    (videolisttitle) => html`
-                      <div class="item">
-                        <video-list-title
-                          videoicon="${videolisttitle.videoicon}"
-                          videotitle="${videolisttitle.videotitle}"
-                        ></video-list-title>
-                      </div>
-                    `
-                  )}
+                <div class="list-of-video">
+                  <div class="number-of-videos">
+                    ${this.numberofvideos} Videos
+                  </div>
+                  <div class="number-of-readings">
+                    ${this.numberofreadings} Readings
+                  </div>
+                  <div class="number-of-quizzes">
+                    ${this.numberofquizzes} Quiz
+                  </div>
                 </div>
               </details>
             </div>

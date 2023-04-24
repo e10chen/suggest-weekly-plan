@@ -1,23 +1,42 @@
 [
   {
-      "weeknumber": "1",
-      "timetocomplete": "4 hours to complete",
-      "headline": "Something idk",
-      "description": "In this module, you will learn what it means to be happy and why pursuing happiness is not a pointless endeavor. Dr. Santos addresses how our minds lie to us and how the science shows that our misconceptions about money, grades, and social media are holding us back from implementing the techniques studied in positive psychology.",
-      "videoreadingquiztitle": "9 videos (Total 55 min). 3 reading, 1 quiz"
+    "weeknumber": "1",
+    "timetocomplete": "4",
+    "headline": "Something idk",
+    "description":
+      "In this module, you will learn what it means to be happy and why pursuing happiness is not a pointless endeavor. Dr. Santos addresses how our minds lie to us and how the science shows that our misconceptions about money, grades, and social media are holding us back from implementing the techniques studied in positive psychology.",
+    "numberofvideos": "4 ",
+    "numberofreadings": "10 ",
+    "numberofquizzes": "1 ",
+    "totalminutecompletion": "55 ",
+    "videoArray": [],
+    "readingArray": [],
+    "quizArray": []
   },
   {
     "weeknumber": "2",
-    "timetocomplete": "3 hours to complete",
+    "timetocomplete": "3 ",
     "headline": "Prompt 2",
     "description": "Do it",
-    "videoreadingquiztitle": "8 videos (Total 55 min). 5 reading, 2 quiz"
+    "numberofvideos": "2 ",
+    "numberofreadings": "5 ",
+    "numberofquizzes": "3 ",
+    "totalminutecompletion": "40 ",
+    "videoArray": [],
+    "readingArray": [],
+    "quizArray": []
   },
   {
   "weeknumber": "3",
-  "timetocomplete": "2 hours to complete",
+  "timetocomplete": "2 ",
   "headline": "Prompt 3",
   "description": "AHHHHHH.",
-  "videoreadingquiztitle": "10 videos (Total 55 min). 6 reading, 1 quiz"
+  "numberofvideos": "6 ",
+  "numberofreadings": "2 ",
+  "numberofquizzes": "4 ",
+  "totalminutecompletion": "70 ",
+  "videoArray": [],
+  "readingArray": [],
+  "quizArray": []
   }
 ]

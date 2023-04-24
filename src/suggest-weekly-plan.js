@@ -46,7 +46,10 @@ class SuggestWeeklyPlan extends LitElement {
                 timetocomplete="${weekdescription.timetocomplete}"
                 headline="${weekdescription.headline}"
                 description="${weekdescription.description}"
-                videoreadingquiztitle="${weekdescription.videoreadingquiztitle}"
+                numberofvideos="${weekdescription.numberofvideos}";
+                numberofreadings ="${weekdescription.numberofreadings}";
+                numberofquizzes ="${weekdescription.numberofquizzes}";
+                totalminutecompletion ="${weekdescription.totalminutecompletion}";
               ></week-card-box>
             </div>
           `
