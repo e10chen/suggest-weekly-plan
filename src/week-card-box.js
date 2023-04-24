@@ -71,6 +71,11 @@ class WeekCardBox extends LitElement {
       cursor: pointer;
     }
 
+    .button-text {
+      color: #0056d2;
+
+    }
+
 
   `;
 
