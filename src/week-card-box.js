@@ -16,9 +16,7 @@ class WeekCardBox extends LitElement {
     numberofreadings: { type: Number },
     numberofquizzes: { type: Number },
     totalminutecompletion: { type: Number },
-    videoArray: { type: Array },
-    readingArray: { type: Array },
-    quizArray: { type: Array },
+    activitiesArray: { type: Array }
   };
 
   static styles = css`
@@ -114,9 +112,7 @@ class WeekCardBox extends LitElement {
     this.numberofreadings = "10 ";
     this.numberofquizzes = "1 ";
     this.totalminutecompletion = "55 ";
-    this.videoArray = [];
-    this.readingArray = [];
-    this.quizArray = [];
+    this.activitiesArray = [];
   }
 
   toggleEvent(e) {

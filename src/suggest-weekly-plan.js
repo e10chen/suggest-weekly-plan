@@ -1,9 +1,15 @@
 import { LitElement, html, css } from "lit";
 import "./week-card-box";
+import { IntersectionObserverMixin } from "@lrnwebcomponents/intersection-element/lib/IntersectionObserverMixin.js";
 
-class SuggestWeeklyPlan extends LitElement {
+class SuggestWeeklyPlan extends IntersectionObserverMixin(LitElement) {
   static get properties() {
+    let inter = {};
+    if (super.properties) {
+      inter = super.properties;
+    }
     return {
+      ...inter,
       weekdescription: { type: Array },
     };
   }
@@ -37,6 +43,7 @@ class SuggestWeeklyPlan extends LitElement {
 
   render() {
     return html`
+    ${this.elementVisible ? html`
       <div class="wrapper">
         ${this.weekdescription.map(
           (weekdescription) => html`
@@ -55,7 +62,8 @@ class SuggestWeeklyPlan extends LitElement {
           `
         )}
       </div>
-    `;
+    `:``}
+    `
   }
 }
 

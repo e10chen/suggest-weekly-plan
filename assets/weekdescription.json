@@ -9,9 +9,17 @@
     "numberofreadings": "10 ",
     "numberofquizzes": "1 ",
     "totalminutecompletion": "55 ",
-    "videoArray": [],
-    "readingArray": [],
-    "quizArray": []
+    "activitiesArray": [
+      {
+      "type" : "video",
+      "duration": "10 minutes",
+      "title": "Welcome"
+      },
+      {
+        "type" : "video",
+        "duration": "20 minutes",
+        "title": "How to be happy"
+      }]
   },
   {
     "weeknumber": "2",
@@ -22,9 +30,7 @@
     "numberofreadings": "5 ",
     "numberofquizzes": "3 ",
     "totalminutecompletion": "40 ",
-    "videoArray": [],
-    "readingArray": [],
-    "quizArray": []
+    "activitiesArray": []
   },
   {
   "weeknumber": "3",
@@ -35,8 +41,39 @@
   "numberofreadings": "2 ",
   "numberofquizzes": "4 ",
   "totalminutecompletion": "70 ",
-  "videoArray": [],
-  "readingArray": [],
-  "quizArray": []
-  }
+  "activitiesArray": []
+  },
+  {
+    "weeknumber": "4",
+    "timetocomplete": "2 ",
+    "headline": "Prompt 3",
+    "description": "AHHHHHH.",
+    "numberofvideos": "6 ",
+    "numberofreadings": "2 ",
+    "numberofquizzes": "4 ",
+    "totalminutecompletion": "70 ",
+    "activitiesArray": []
+    },
+    {
+      "weeknumber": "5",
+      "timetocomplete": "2 ",
+      "headline": "Prompt 3",
+      "description": "AHHHHHH.",
+      "numberofvideos": "6 ",
+      "numberofreadings": "2 ",
+      "numberofquizzes": "4 ",
+      "totalminutecompletion": "70 ",
+      "activitiesArray": []
+      },
+      {
+        "weeknumber": "6",
+        "timetocomplete": "2 ",
+        "headline": "Prompt 3",
+        "description": "AHHHHHH.",
+        "numberofvideos": "6 ",
+        "numberofreadings": "2 ",
+        "numberofquizzes": "4 ",
+        "totalminutecompletion": "70 ",
+        "activitiesArray": []
+        }
 ]
