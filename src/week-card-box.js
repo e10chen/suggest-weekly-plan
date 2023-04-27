@@ -1,4 +1,6 @@
 import { LitElement, html, css } from "lit";
+import "@lrnwebcomponents/simple-icon/simple-icon.js";
+import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 class WeekCardBox extends LitElement {
   static properties = {
@@ -16,14 +18,20 @@ class WeekCardBox extends LitElement {
     numberofreadings: { type: Number },
     numberofquizzes: { type: Number },
     totalminutecompletion: { type: Number },
-    activitiesArray: { type: Array }
+    activitiesArray: { type: Array },
+    objectiveIcon: { type: String },
+    objectiveIconColor: { type: String },
+    moduleObjectivesIcon: { type: String },
   };
 
   static styles = css`
-    :host{
-      display: block;
-      justify-content: left;
-    }
+   :host {
+    font-size: 16px;
+    font-weight: 100;
+    font-family: "Source Sans Pro", sans-serif;
+    --video-icon-background-color: linear-gradient( 0.25turn, #fb814e, #f6b343 );
+    --objectives-icon-background-color: linear-gradient( 0.25turn, #45c9b4, #3bb3d5 );
+}
 
     .week-card {
       display: flex;
@@ -95,6 +103,26 @@ class WeekCardBox extends LitElement {
       border-bottom: 1px solid red;
     }
 
+    .video {
+      background: var(--video-icon-background-color);
+    }
+
+    .objectives {
+      background: var(--objectives-icon-background-color);
+    }
+
+
+    .iconContainer {
+      height: 25px;
+      width: 25px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      padding: 5px;
+      margin: 0px 5px 0px 0px;
+      text-align: center;
+    }
+
 
   `;
 
@@ -113,6 +141,9 @@ class WeekCardBox extends LitElement {
     this.numberofquizzes = "1 ";
     this.totalminutecompletion = "55 ";
     this.activitiesArray = [];
+    this.objectiveIcon = "device:access-time";
+    this.objectiveIconColor = "white";
+    this.moduleObjectivesIcon = "av:library-books";
   }
 
   toggleEvent(e) {
@@ -159,13 +190,26 @@ class WeekCardBox extends LitElement {
 
         <div class="syllabus-module">
           <div class="time-to-complete">
+            <span class="iconContainer video">
+              <simple-icon
+                icon="${this.objectiveIcon}"
+                style="--simple-icon-color:${this.objectiveIconColor};"
+              ></simple-icon
+            ></span>
             ${this.timetocomplete} hours to complete
           </div>
+
           <div class="headline">${this.headline}</div>
           <div class="description">${this.description}</div>
           <div class="video-reading-quiz-see-all">
             <div class="video-reading-quiz-heading">
               <div class="video-reading-quiz-title">
+                <span class="iconContainer objectives">
+                  <simple-icon
+                    style="--simple-icon-color:${this.objectiveIconColor}"
+                    icon="${this.moduleObjectivesIcon}"
+                  ></simple-icon
+                ></span>
                 ${this.numberofvideos} videos (Total
                 ${this.totalminutecompletion} min) ${this.numberofreadings}
                 reading, ${this.numberofquizzes} quiz
