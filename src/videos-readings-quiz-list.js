@@ -31,10 +31,15 @@ class VideoReadingsQuizList extends LitElement {
       flex-direction: row;
     }
     .content-divider {
+      padding: 10px;
       border-bottom: 1px solid black;
     }
     .content-title {
       flex: 1;
+    }
+
+    .duration {
+      width: 650px;
     }
   `;
 
