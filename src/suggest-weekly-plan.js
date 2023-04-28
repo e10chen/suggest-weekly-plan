@@ -1,6 +1,9 @@
 import { LitElement, html, css } from "lit";
 import "./week-card-box";
+import "./videos-readings-quiz-list";
 import { IntersectionObserverMixin } from "@lrnwebcomponents/intersection-element/lib/IntersectionObserverMixin.js";
+import "@lrnwebcomponents/simple-icon/simple-icon.js";
+import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 class SuggestWeeklyPlan extends IntersectionObserverMixin(LitElement) {
   static get properties() {
@@ -43,27 +46,29 @@ class SuggestWeeklyPlan extends IntersectionObserverMixin(LitElement) {
 
   render() {
     return html`
-    ${this.elementVisible ? html`
-      <div class="wrapper">
-        ${this.weekdescription.map(
-          (weekdescription) => html`
-            <div class="item">
-              <week-card-box
-                weeknumber="${weekdescription.weeknumber}"
-                timetocomplete="${weekdescription.timetocomplete}"
-                headline="${weekdescription.headline}"
-                description="${weekdescription.description}"
-                numberofvideos="${weekdescription.numberofvideos}";
-                numberofreadings ="${weekdescription.numberofreadings}";
-                numberofquizzes ="${weekdescription.numberofquizzes}";
-                totalminutecompletion ="${weekdescription.totalminutecompletion}";
-              ></week-card-box>
+      ${this.elementVisible
+        ? html`
+            <div class="wrapper">
+              ${this.weekdescription.map(
+                (weekdescription) => html`
+                  <div class="item">
+                    <week-card-box
+                      weeknumber="${weekdescription.weeknumber}"
+                      timetocomplete="${weekdescription.timetocomplete}"
+                      headline="${weekdescription.headline}"
+                      description="${weekdescription.description}"
+                      .items=${weekdescription}
+                      .videos=${weekdescription.videos}
+                      .readings=${weekdescription.readings}
+                      .quizzes=${weekdescription.quizzes}
+                    ></week-card-box>
+                  </div>
+                `
+              )}
             </div>
           `
-        )}
-      </div>
-    `:``}
-    `
+        : ``}
+    `;
   }
 }
 

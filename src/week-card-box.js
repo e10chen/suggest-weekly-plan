@@ -1,6 +1,7 @@
 import { LitElement, html, css } from "lit";
 import "@lrnwebcomponents/simple-icon/simple-icon.js";
 import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
+import "./videos-readings-quiz-list";
 
 class WeekCardBox extends LitElement {
   static properties = {
@@ -18,7 +19,10 @@ class WeekCardBox extends LitElement {
     numberofreadings: { type: Number },
     numberofquizzes: { type: Number },
     totalminutecompletion: { type: Number },
-    activitiesArray: { type: Array },
+    videos: { type: Array },
+    readings: { type: Array },
+    quizzes: { type: Array },
+    items: { type: Object },
     objectiveIcon: { type: String },
     objectiveIconColor: { type: String },
     moduleObjectivesIcon: { type: String },
@@ -86,23 +90,6 @@ class WeekCardBox extends LitElement {
 
     }
 
-    .number-of-videos {
-      padding: 10px;
-      margin-top: 10px;
-      border-top: 1px solid red;
-      border-bottom: 1px solid red;
-    }
-
-    .number-of-readings {
-      padding: 10px;
-      border-bottom: 1px solid red;
-    }
-
-    .number-of-quizzes{
-      padding: 10px;
-      border-bottom: 1px solid red;
-    }
-
     .video {
       background: var(--video-icon-background-color);
     }
@@ -130,20 +117,22 @@ class WeekCardBox extends LitElement {
     super();
     this.header = "My app";
     this.opened = false;
-    this.weeknumber = "1";
-    this.timetocomplete = "4";
+    this.weeknumber = 1;
     this.headline = "Something idk";
     this.description =
       "In this module, you will learn what it means to be happy and why pursuing happiness is not a pointless endeavor. Dr. Santos addresses how our minds lie to us and how the science shows that our misconceptions about money, grades, and social media are holding us back from implementing the techniques studied in positive psychology.";
     this.opened = false;
-    this.numberofvideos = "4 ";
-    this.numberofreadings = "10 ";
-    this.numberofquizzes = "1 ";
-    this.totalminutecompletion = "55 ";
-    this.activitiesArray = [];
+    this.numberofvideos = 0;
+    this.numberofreadings = 0;
+    this.numberofquizzes = 0;
+    this.videos = [];
+    this.readings = [];
+    this.quizzes = [];
     this.objectiveIcon = "device:access-time";
     this.objectiveIconColor = "white";
     this.moduleObjectivesIcon = "av:library-books";
+    this.totalminutecompletion = 0;
+    this.timetocomplete = 0;
   }
 
   toggleEvent(e) {
@@ -155,19 +144,39 @@ class WeekCardBox extends LitElement {
     this.opened = state;
   }
 
+  totalContent() {
+    this.videos.map((video) => {
+      this.totalminutecompletion += video.Duration;
+      this.timetocomplete += this.totalminutecompletion;
+      return this.totalminutecompletion;
+    });
+    this.readings.map((reading) => {
+      this.timetocomplete += reading.Duration;
+    });
+    this.quizzes.map((quizzes) => {
+      this.timetocomplete += quizzes.Duration;
+    });
+    this.numberofvideos = this.videos.length;
+    this.numberofreadings = this.readings.length;
+    this.numberofquizzes = this.quizzes.length;
+  }
+
   updated(changedProperties) {
     changedProperties.forEach((oldValue, propName) => {
-      if (propName === "opened") {
+      if (propName === "open") {
         this.dispatchEvent(
-          new CustomEvent("open-changed", {
+          new CustomEvent("opened-changed", {
             composed: true,
             bubbles: true,
-            cacnelable: false,
+            cancelable: false,
             detail: {
               value: this[propName],
             },
           })
         );
+      }
+      if (propName == "videos") {
+        this.totalContent();
       }
     });
   }
@@ -224,17 +233,11 @@ class WeekCardBox extends LitElement {
                 <summary class="button-text">
                   ${this.seealltext(this.opened)}
                 </summary>
-                <div class="list-of-video">
-                  <div class="number-of-videos">
-                    ${this.numberofvideos} Videos
-                  </div>
-                  <div class="number-of-readings">
-                    ${this.numberofreadings} Readings
-                  </div>
-                  <div class="number-of-quizzes">
-                    ${this.numberofquizzes} Quiz
-                  </div>
-                </div>
+                <videos-readings-quiz-list
+                  .videos=${this.items.videos}
+                  .readings=${this.items.readings}
+                  .quizzes=${this.items.quizzes}
+                ></videos-readings-quiz-list>
               </details>
             </div>
           </div>

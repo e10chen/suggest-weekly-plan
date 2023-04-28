@@ -5,75 +5,164 @@
     "headline": "Something idk",
     "description":
       "In this module, you will learn what it means to be happy and why pursuing happiness is not a pointless endeavor. Dr. Santos addresses how our minds lie to us and how the science shows that our misconceptions about money, grades, and social media are holding us back from implementing the techniques studied in positive psychology.",
-    "numberofvideos": "4 ",
-    "numberofreadings": "10 ",
-    "numberofquizzes": "1 ",
-    "totalminutecompletion": "55 ",
-    "activitiesArray": [
+    "videos": [
       {
-      "type" : "video",
-      "duration": "10 minutes",
-      "title": "Welcome"
+        "Title": "Welcome",
+        "Duration": 10
       },
       {
-        "type" : "video",
-        "duration": "20 minutes",
-        "title": "How to be happy"
-      }]
+        "Title": "How to be happy",
+        "Duration": 20
+      }],
+    "readings": [
+      {
+          "Title": "Welcome Read",
+          "Duration": 10
+      },
+      {
+          "Title": "Read me",
+          "Duration": 20
+      }],
+    "quizzes": [
+       {
+            "Title": "Take Home Quiz",
+            "Duration": 10
+        },
+        {
+            "Title": "Quiz 2",
+            "Duration": 20
+        }]
   },
   {
     "weeknumber": "2",
     "timetocomplete": "3 ",
     "headline": "Prompt 2",
     "description": "Do it",
-    "numberofvideos": "2 ",
-    "numberofreadings": "5 ",
-    "numberofquizzes": "3 ",
-    "totalminutecompletion": "40 ",
-    "activitiesArray": []
+    "videos": [{
+      "Title": "Introduction to life",
+      "Duration": 15
+    },
+    {
+      "Title": "How to not be bad at programming",
+      "Duration": 30
+    }],
+    "readings": [
+      {
+        "Title": "Idk Read",
+        "Duration": 10
+      },
+      {
+        "Title": "Coding",
+        "Duration": 20
+      }],
+      "quizzes": [
+        {
+          "Title": "Take Home Quiz",
+          "Duration": 10
+        },
+        {
+          "Title": "Quiz 2",
+          "Duration": 20
+        }]
   },
   {
   "weeknumber": "3",
   "timetocomplete": "2 ",
   "headline": "Prompt 3",
   "description": "AHHHHHH.",
-  "numberofvideos": "6 ",
-  "numberofreadings": "2 ",
-  "numberofquizzes": "4 ",
-  "totalminutecompletion": "70 ",
-  "activitiesArray": []
+  "videos": [],
+  "readings": [
+    {
+      "Title": "Welcome Read",
+      "Duration": 10
+    },
+    {
+      "Title": "Read me",
+      "Duration": 20
+    }],
+    "quizzes": [
+      {
+        "Title": "Take Home Quiz",
+        "Duration": 10
+      },
+      {
+        "Title": "Quiz 2",
+        "Duration": 20
+      }]
   },
   {
     "weeknumber": "4",
     "timetocomplete": "2 ",
     "headline": "Prompt 3",
     "description": "AHHHHHH.",
-    "numberofvideos": "6 ",
-    "numberofreadings": "2 ",
-    "numberofquizzes": "4 ",
-    "totalminutecompletion": "70 ",
-    "activitiesArray": []
+    "videos": [],
+    "readings": [
+      {
+        "Title": "Welcome Read",
+        "Duration": 10
+      },
+      {
+        "Title": "Read me",
+        "Duration": 20
+      }],
+      "quizzes": [
+        {
+          "Title": "Take Home Quiz",
+          "Duration": 10
+        },
+        {
+          "Title": "Quiz 2",
+          "Duration": 20
+        }]
     },
     {
       "weeknumber": "5",
       "timetocomplete": "2 ",
       "headline": "Prompt 3",
       "description": "AHHHHHH.",
-      "numberofvideos": "6 ",
-      "numberofreadings": "2 ",
-      "numberofquizzes": "4 ",
-      "totalminutecompletion": "70 ",
-      "activitiesArray": []
+      "videos": [],
+      "readings": [
+        {
+          "Title": "Welcome Read",
+          "Duration": 10
+        },
+        {
+          "Title": "Read me",
+          "Duration": 20
+        }],
+        "quizzes": [
+          {
+            "Title": "Take Home Quiz",
+            "Duration": 10
+          },
+          {
+            "Title": "Quiz 2",
+            "Duration": 20
+          }]
       },
       {
         "weeknumber": "6",
         "timetocomplete": "2 ",
         "headline": "Prompt 3",
         "description": "AHHHHHH.",
-        "numberofvideos": "6 ",
-        "numberofreadings": "2 ",
-        "numberofquizzes": "4 ",
-        "totalminutecompletion": "70 ",
-        "activitiesArray": []
+        "videos": [],
+        "readings": [
+          {
+            "Title": "Welcome Read",
+            "Duration": 10
+          },
+          {
+            "Title": "Read me",
+            "Duration": 20
+          }],
+          "quizzes": [
+            {
+              "Title": "Take Home Quiz",
+              "Duration": 10
+            },
+            {
+              "Title": "Quiz 2",
+              "Duration": 20
+            }]
         }
 ]
