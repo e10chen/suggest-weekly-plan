@@ -38,9 +38,6 @@ class VideoReadingsQuizList extends LitElement {
       flex: 1;
     }
 
-    .duration {
-      width: 650px;
-    }
   `;
 
   constructor() {

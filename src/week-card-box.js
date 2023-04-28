@@ -74,11 +74,10 @@ class WeekCardBox extends LitElement {
     .video-reading-quiz-see-all {
       display: flex;
       padding: 10px;
+      align-items: baseline;
     }
 
-    .space-between-heading-and-button {
-      margin-left: 20px;
-    }
+
 
     details > summary {
       list-style: none;
@@ -205,7 +204,7 @@ class WeekCardBox extends LitElement {
                 style="--simple-icon-color:${this.objectiveIconColor};"
               ></simple-icon
             ></span>
-            ${this.timetocomplete} hours to complete
+            ${this.timetocomplete} mintues to complete
           </div>
 
           <div class="headline">${this.headline}</div>
@@ -224,23 +223,22 @@ class WeekCardBox extends LitElement {
                 reading, ${this.numberofquizzes} quiz
               </div>
             </div>
-            <div class="space-between-heading-and-button">
-              <details
-                class="see-all-button"
-                .open=${this.opened}
-                @toggle="${this.toggleEvent}"
-              >
-                <summary class="button-text">
-                  ${this.seealltext(this.opened)}
-                </summary>
-                <videos-readings-quiz-list
-                  .videos=${this.items.videos}
-                  .readings=${this.items.readings}
-                  .quizzes=${this.items.quizzes}
-                ></videos-readings-quiz-list>
-              </details>
-            </div>
           </div>
+
+          <details
+            class="see-all-button"
+            .open=${this.opened}
+            @toggle="${this.toggleEvent}"
+          >
+            <summary class="button-text">
+              ${this.seealltext(this.opened)}
+            </summary>
+            <videos-readings-quiz-list
+              .videos=${this.items.videos}
+              .readings=${this.items.readings}
+              .quizzes=${this.items.quizzes}
+            ></videos-readings-quiz-list>
+          </details>
         </div>
       </div>
     `;
