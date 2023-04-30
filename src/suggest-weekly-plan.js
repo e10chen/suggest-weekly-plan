@@ -35,7 +35,7 @@ class SuggestWeeklyPlan extends IntersectionObserverMixin(LitElement) {
   }
 
   updateWeekDescription() {
-    const address = new URL ("../api/weekdescription.js", import.meta.url).href;
+    const address = "../api/weekdescription";
     //const address = "../assets/weekdescription.json";
     fetch(address)
       .then((response) => {
