@@ -146,7 +146,7 @@ class WeekCardBox extends LitElement {
   totalContent() {
     this.videos.map((video) => {
       this.totalminutecompletion += video.Duration;
-      this.timetocomplete += this.totalminutecompletion;
+      this.timetocomplete = this.totalminutecompletion;
       return this.totalminutecompletion;
     });
     this.readings.map((reading) => {
