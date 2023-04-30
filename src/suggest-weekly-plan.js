@@ -14,10 +14,14 @@ class SuggestWeeklyPlan extends IntersectionObserverMixin(LitElement) {
     return {
       ...inter,
       weekdescription: { type: Array },
+      weeknumber: { type: Number },
     };
   }
 
   static styles = css`
+    body {
+      background-color: white;
+    }
     .item {
       justify-content: left;
     }
@@ -26,12 +30,13 @@ class SuggestWeeklyPlan extends IntersectionObserverMixin(LitElement) {
   constructor() {
     super();
     this.weekdescription = [];
+    this.weeknumber = 0;
     this.updateWeekDescription();
   }
 
   updateWeekDescription() {
-    //const address = "../api/weekdescription";
-    const address = "../assets/weekdescription.json";
+    const address = new URL ("../api/weekdescription.js", import.meta.url).href;
+    //const address = "../assets/weekdescription.json";
     fetch(address)
       .then((response) => {
         if (response.ok) {
@@ -44,6 +49,11 @@ class SuggestWeeklyPlan extends IntersectionObserverMixin(LitElement) {
       });
   }
 
+  weekNumber() {
+    this.weeknumber += 1;
+    return this.weeknumber;
+  }
+
   render() {
     return html`
       ${this.elementVisible
@@ -53,7 +63,7 @@ class SuggestWeeklyPlan extends IntersectionObserverMixin(LitElement) {
                 (weekdescription) => html`
                   <div class="item">
                     <week-card-box
-                      weeknumber="${weekdescription.weeknumber}"
+                      weeknumber=${this.weekNumber()}
                       timetocomplete="${weekdescription.timetocomplete}"
                       headline="${weekdescription.headline}"
                       description="${weekdescription.description}"

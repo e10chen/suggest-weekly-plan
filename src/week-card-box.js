@@ -52,7 +52,7 @@ class WeekCardBox extends LitElement {
     .syllabus-module {
       width: 2000px;
       padding-bottom: 20px;
-      border-bottom: 1px solid red;
+      border-bottom: 1px solid black;
     }
 
     .time-to-complete {
@@ -76,8 +76,6 @@ class WeekCardBox extends LitElement {
       padding: 10px;
       align-items: baseline;
     }
-
-
 
     details > summary {
       list-style: none;
@@ -114,12 +112,9 @@ class WeekCardBox extends LitElement {
 
   constructor() {
     super();
-    this.header = "My app";
-    this.opened = false;
-    this.weeknumber = 1;
-    this.headline = "Something idk";
-    this.description =
-      "In this module, you will learn what it means to be happy and why pursuing happiness is not a pointless endeavor. Dr. Santos addresses how our minds lie to us and how the science shows that our misconceptions about money, grades, and social media are holding us back from implementing the techniques studied in positive psychology.";
+    this.weeknumber = 0;
+    this.headline = "";
+    this.description ="";
     this.opened = false;
     this.numberofvideos = 0;
     this.numberofreadings = 0;

@@ -1,24 +1,200 @@
 export default async function handler(request, res) {
 
-  console.log(request.query.search);
-
 const weekdescription = [
   {
-      "weeknumber": "1",
-      "timetocomplete": "4 ",
-      "headline": "Something idk",
-      "description": "In this module, you will learn what it means to be happy and why pursuing happiness is not a pointless endeavor. Dr. Santos addresses how our minds lie to us and how the science shows that our misconceptions about money, grades, and social media are holding us back from implementing the techniques studied in positive psychology.",
-      "videoreadingquiztitle": "9 videos (Total 55 min). 3 reading, 1 quiz"
+    "headline": "Introduction to Cyber Security",
+    "description":
+      "This module provides exposure to basic cyber security concepts including some simple, foundational attack methods.",
+    "videos": [
+      {
+        "Title": "Introduction: What You Will Learn from This Course on Cyber Security",
+        "Duration": 1
+      },
+      {
+        "Title": "Assignments and Reading",
+        "Duration": 2
+      },
+      {
+        "Title": "Hacking an Old-Fashioned Soda Machine",
+        "Duration": 4
+    },
+    {
+        "Title": "Simple Worm Program",
+        "Duration": 4
+    },
+    {
+      "Title": "Trojan Horse Login Program",
+      "Duration": 7
+    },
+    {
+    "Title": "Malicious Compiler Program",
+    "Duration": 8
+    },
+    {
+      "Title": "Typical Unix Kernel Attack",
+      "Duration": 6
+    },
+    {
+      "Title": "Explaining Interview Series",
+      "Duration": 1
+    }],
+    "readings": [
+      {
+          "Title": "Required: Smashing the Stack for FUn and Profit, Aleph One",
+          "Duration": 30
+      },
+      {
+        "Title": "Required: Reflections on Trusting Trust, Ken Thompson",
+        "Duration": 30
+      },
+      {
+        "Title": "DEF CON 23",
+        "Duration": 46
+      },
+      {
+      "Title": "Kevin Mitnick | Talks at Google",
+      "Duration": 52
+      },
+      {
+        "Title": "Suggested: Introudction to Cyber Security (CH. 1-2)",
+        "Duration": 30
+      },
+      {
+        "Title": "Suggested: TCP/IP Illustration Volume 1 (2nd Ed.), (CH. 1-2)",
+        "Duration": 30
+      }
+    ],
+    "quizzes": [
+      {
+            "Title": "Module 1 Quiz",
+            "Duration": 30
+      }]
   },
   {
-    "weeknumber": "2",
-    "timetocomplete": "3 ",
     "headline": "Prompt 2",
-    "description": "Do this.",
-    "videoreadingquiztitle": "8 videos (Total 55 min). 5 reading, 2 quiz"
-},
-
+    "description": "Do it",
+    "videos": [
+      {
+      "Title": "Introduction to life",
+      "Duration": 15
+      },
+      {
+      "Title": "How to not be bad at programming",
+      "Duration": 30
+      }],
+    "readings": [
+      {
+        "Title": "Idk Read",
+        "Duration": 10
+      },
+      {
+        "Title": "Coding",
+        "Duration": 20
+      }],
+      "quizzes": [
+      {
+          "Title": "Take Home Quiz",
+          "Duration": 10
+      },
+      {
+          "Title": "Quiz 2",
+          "Duration": 20
+      }]
+  },
+  {
+    "headline": "Prompt 3",
+    "description": "AHHHHHH.",
+    "videos": [],
+    "readings": [
+      {
+        "Title": "Welcome Read",
+        "Duration": 10
+      },
+      {
+       "Title": "Read me",
+        "Duration": 20
+      }],
+    "quizzes": [
+      {
+        "Title": "Take Home Quiz",
+        "Duration": 10
+      },
+      {
+        "Title": "Quiz 2",
+        "Duration": 20
+      }]
+  },
+  {
+    "headline": "Prompt 3",
+    "description": "AHHHHHH.",
+    "videos": [],
+    "readings": [
+      {
+        "Title": "Welcome Read",
+        "Duration": 10
+      },
+      {
+        "Title": "Read me",
+        "Duration": 20
+      }],
+    "quizzes": [
+      {
+          "Title": "Take Home Quiz",
+          "Duration": 10
+      },
+      {
+          "Title": "Quiz 2",
+          "Duration": 20
+      }]
+  },
+  {
+    "headline": "Prompt 3",
+    "description": "AHHHHHH.",
+    "videos": [],
+    "readings": [
+      {
+        "Title": "Welcome Read",
+        "Duration": 10
+      },
+      {
+        "Title": "Read me",
+        "Duration": 20
+      }],
+    "quizzes": [
+      {
+       "Title": "Take Home Quiz",
+        "Duration": 10
+      },
+      {
+        "Title": "Quiz 2",
+        "Duration": 20
+      }]
+  },
+  {
+    "headline": "Prompt 3",
+    "description": "AHHHHHH.",
+    "videos": [],
+    "readings": [
+      {
+        "Title": "Welcome Read",
+        "Duration": 10
+      },
+      {
+        "Title": "Read me",
+        "Duration": 20
+      }],
+    "quizzes": [
+      {
+        "Title": "Take Home Quiz",
+        "Duration": 10
+      },
+      {
+      "Title": "Quiz 2",
+      "Duration": 20
+      }]
+  }
 ];
+
 res.setHeader('Cache-Control', 'max-age=0, s-maxage=1800');
 res.setHeader("Access-Control-Allow-Credentials", "true");
 res.setHeader("Access-Control-Allow-Origin", "*");

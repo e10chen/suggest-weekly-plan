@@ -31,9 +31,13 @@ class VideoReadingsQuizList extends LitElement {
       flex-direction: row;
     }
     .content-divider {
-      padding: 10px;
       border-bottom: 1px solid black;
     }
+
+    .content-padding {
+      padding: 10px;
+    }
+
     .content-title {
       flex: 1;
     }
@@ -55,7 +59,7 @@ class VideoReadingsQuizList extends LitElement {
 
   render() {
     return html` <div class="list-of-content">
-      <div class="number-of-videos content-divider">
+      <div class="number-of-videos content-padding content-divider">
         ${this.videos.map(
           (video) => html`
             <div class="content-item">
@@ -65,7 +69,7 @@ class VideoReadingsQuizList extends LitElement {
           `
         )}
       </div>
-      <div class="number-of-readings content-divider">
+      <div class="number-of-readings content-padding content-divider">
         ${this.readings.map(
           (reading) => html`
             <div class="content-item">
@@ -75,7 +79,7 @@ class VideoReadingsQuizList extends LitElement {
           `
         )}
       </div>
-      <div class="number-of-quizzes content-divider">
+      <div class="number-of-quizzes content-padding">
         ${this.quizzes.map(
           (quizzes) => html`
             <div class="content-item">
