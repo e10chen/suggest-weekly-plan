@@ -1,4 +1,6 @@
 import { LitElement, html, css } from "lit";
+import "@lrnwebcomponents/simple-icon/simple-icon.js";
+import "@lrnwebcomponents/simple-icon/lib/simple-icons.js";
 
 class VideoReadingsQuizList extends LitElement {
   static properties = {
@@ -41,7 +43,6 @@ class VideoReadingsQuizList extends LitElement {
     .content-title {
       flex: 1;
     }
-
   `;
 
   constructor() {
@@ -49,6 +50,9 @@ class VideoReadingsQuizList extends LitElement {
     this.videos = [];
     this.readings = [];
     this.quizzes = [];
+    this.numberofvideos = 0;
+    this.numberofreadings = 0;
+    this.numberofquizzes = 0;
   }
 
   totalContent() {
@@ -57,9 +61,22 @@ class VideoReadingsQuizList extends LitElement {
     this.numberofquizzes = this.quizzes.length;
   }
 
+  updated(changedProperties) {
+    changedProperties.forEach((oldValue, propName) => {
+      this.totalContent();
+    });
+  }
+
   render() {
     return html` <div class="list-of-content">
       <div class="number-of-videos content-padding content-divider">
+        <div class="total-videos content-padding">
+          <simple-icon
+            style="--simple-icon-color: blue"
+            icon="av:play-circle-outline"
+          ></simple-icon>
+          ${this.numberofvideos} videos
+        </div>
         ${this.videos.map(
           (video) => html`
             <div class="content-item">
@@ -70,6 +87,13 @@ class VideoReadingsQuizList extends LitElement {
         )}
       </div>
       <div class="number-of-readings content-padding content-divider">
+        <div class="total-reading content-padding">
+          <simple-icon
+            style="--simple-icon-color: blue"
+            icon="av:play-circle-outline"
+          ></simple-icon>
+          ${this.numberofreadings} readings
+        </div>
         ${this.readings.map(
           (reading) => html`
             <div class="content-item">
