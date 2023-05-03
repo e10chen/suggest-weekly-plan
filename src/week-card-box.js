@@ -84,7 +84,7 @@ class WeekCardBox extends LitElement {
 
     .button-text {
       color: #0056d2;
-
+      margin: 10px 0px 10px 5px;
     }
 
     .video {
