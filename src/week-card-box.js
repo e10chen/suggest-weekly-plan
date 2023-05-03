@@ -215,7 +215,7 @@ class WeekCardBox extends LitElement {
                 ></span>
                 ${this.numberofvideos} videos (Total
                 ${this.totalminutecompletion} min) ${this.numberofreadings}
-                reading, ${this.numberofquizzes} quiz
+                readings, ${this.numberofquizzes} quiz
               </div>
             </div>
           </div>

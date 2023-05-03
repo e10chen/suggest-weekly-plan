@@ -310,49 +310,118 @@ const weekdescription = [
       }]
   },
   {
-    "headline": "Prompt 3",
-    "description": "AHHHHHH.",
-    "videos": [],
+    "headline": "Welcome and Course Overview",
+    "description": "Checkout our marquee speaker. She's the Chief Privacy Officer at Coca Cola.",
+    "videos": [{
+        "Title": "Welcome to 'Cybersecurity and Its Ten Domains'",
+        "Duration": 1
+    },
+    {
+      "Title": "The Importance of Cybersecurity",
+      "Duration": 1
+    }],
     "readings": [
       {
-        "Title": "Welcome Read",
+        "Title": "Welcome to the Course",
         "Duration": 10
       },
       {
-        "Title": "Read me",
-        "Duration": 20
+        "Title": "Meet the Instructor",
+        "Duration": 10
+      },
+      {
+        "Title": "Course Objectives",
+        "Duration": 10
       }],
     "quizzes": [
       {
-       "Title": "Take Home Quiz",
-        "Duration": 10
-      },
-      {
-        "Title": "Quiz 2",
-        "Duration": 20
+       "Title": "Test Your Existing Knowledge",
+        "Duration": 30
       }]
   },
   {
-    "headline": "Prompt 3",
-    "description": "AHHHHHH.",
-    "videos": [],
+    "headline": "Introduction to Security, Access Control, and Software Development Security",
+    "description": "In this module we cover some of the fundamentals of security that will assist you throughout the course. We will then introduce you to two domains of cyber security: access control and software development security. Focus will be on areas such as confidentiality, integrity, and availability, as well secure software development techniques.",
+    "videos": [
+  {
+      "Title": "Module Overview",
+      "Duration": 1
+  },
+  {
+    "Title": "Introduction to Security",
+    "Duration": 3
+  },
+  {
+    "Title": "Access Control",
+    "Duration": 2
+  },
+  {
+  "Title": "Software Development Security",
+  "Duration": 3
+  }],
     "readings": [
       {
-        "Title": "Welcome Read",
-        "Duration": 10
-      },
-      {
-        "Title": "Read me",
-        "Duration": 20
+        "Title": "Module Readings",
+        "Duration": 190
       }],
     "quizzes": [
       {
-        "Title": "Take Home Quiz",
-        "Duration": 10
-      },
+        "Title": "Introduction to Security, Access Control, and Software Development Security Quiz",
+        "Duration": 30
+      }]
+  },
+  {
+    "headline": "Business Continuity and Disaster Recovery Planning and Cryptography",
+    "description": "In this module we are going to delve a little deeper into cyber security by covering business continuity and disaster recovery planning and cryptography. Learners will be exposed to what a disruptive event is and how the federal government through agencies such as FEMA handles disasters. We will also covers encryption and decryption and the various techniques used.",
+    "videos": [
+  {
+      "Title": "Module Overview",
+      "Duration": 1
+  },
+  {
+    "Title": "Business Continuity and Disaster Recovery Planning",
+    "Duration": 2
+  },
+  {
+    "Title": "Cryptography",
+    "Duration": 1
+  }],
+    "readings": [
       {
-      "Title": "Quiz 2",
-      "Duration": 20
+        "Title": "Module Readings",
+        "Duration": 240
+      }],
+    "quizzes": [
+      {
+        "Title": "Business Continuity and Disaster Recovery Planning and Cryptography Quiz",
+        "Duration": 30
+      }]
+  },
+  {
+    "headline": "Information Security Governance and Risk Management & Legal, Regulations, Investigations, and Compliance",
+    "description": "In this module we are going to cover some of the non-technical topics associated to cyber security: Information security governance and risk management and legal, regulations, investigations, and compliance. It is important to realize, that non-technical does not mean easy, or not important. In fact, I would like to argue that they are more important that the technical side of cyber security.",
+    "videos": [
+  {
+      "Title": "Module Overview",
+      "Duration": 1
+  },
+  {
+    "Title": "Information Security Governance and Risk Management",
+    "Duration": 1
+  },
+  {
+    "Title": "Legal, Regulations, Investigations, and Compliance",
+    "Duration": 2
+  }],
+    "readings": [
+      {
+        "Title": "Module Readings",
+        "Duration": 240
+      }],
+    "quizzes": [
+      {
+        "Title": "Information Security Governance and Risk Management & Legal, Regulations, Investigations, and Compliance Quiz",
+        "Duration": 30
       }]
   }
 ];

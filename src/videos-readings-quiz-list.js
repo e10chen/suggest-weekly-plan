@@ -40,6 +40,15 @@ class VideoReadingsQuizList extends LitElement {
       padding: 10px;
     }
 
+    .icons{
+      display: inline-block;
+    }
+
+    .content-margin {
+      display: inline-block;
+      margin: 0px 16px 0px 16px;
+    }
+
     .content-title {
       flex: 1;
     }
@@ -71,11 +80,13 @@ class VideoReadingsQuizList extends LitElement {
     return html` <div class="list-of-content">
       <div class="number-of-videos content-padding content-divider">
         <div class="total-videos content-padding">
-          <simple-icon
+          <simple-icon class = "icons"
             style="--simple-icon-color: blue"
             icon="av:play-circle-outline"
           ></simple-icon>
-          ${this.numberofvideos} videos
+          <div class="video-text content-margin">
+            ${this.numberofvideos} videos
+          </div>
         </div>
         ${this.videos.map(
           (video) => html`
@@ -88,11 +99,13 @@ class VideoReadingsQuizList extends LitElement {
       </div>
       <div class="number-of-readings content-padding content-divider">
         <div class="total-reading content-padding">
-          <simple-icon
-            style="--simple-icon-color: blue"
-            icon="av:play-circle-outline"
+          <simple-icon class = "icons"
+            style="--simple-icon-color: green"
+            icon="communication:import-contacts"
           ></simple-icon>
-          ${this.numberofreadings} readings
+          <div class="reading-text content-margin">
+            ${this.numberofreadings} readings
+          </div>
         </div>
         ${this.readings.map(
           (reading) => html`
@@ -104,6 +117,15 @@ class VideoReadingsQuizList extends LitElement {
         )}
       </div>
       <div class="number-of-quizzes content-padding">
+        <div class="total-quizzes content-padding">
+          <simple-icon class = "icons"
+            style="--simple-icon-color: blue"
+            icon="av:library-books"
+          ></simple-icon>
+          <div class="quizzes-text content-margin">
+            ${this.numberofquizzes} quizzes
+          </div>
+        </div>
         ${this.quizzes.map(
           (quizzes) => html`
             <div class="content-item">
