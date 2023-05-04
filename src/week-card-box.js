@@ -107,7 +107,7 @@ class WeekCardBox extends LitElement {
       text-align: center;
     }
 
-    @media screen and (max-width: 600px) and (min-width: 370px) {
+    @media screen and (max-width: 600px) and (min-width: 377px) {
       :host {
         font-size: 13px;
       }
@@ -123,7 +123,7 @@ class WeekCardBox extends LitElement {
     }
   }
 
-  @media screen and (max-width: 369px) {
+  @media screen and (max-width: 376px) {
     :host {
         font-size: 11px;
       }
