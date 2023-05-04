@@ -107,14 +107,44 @@ class WeekCardBox extends LitElement {
       text-align: center;
     }
 
+    @media screen and (max-width: 600px) and (min-width: 370px) {
+      :host {
+        font-size: 13px;
+      }
 
+    .iconContainer {
+      height: 20px;
+      width: 20px;
+    }
+
+    simple-icon {
+      height: 19px;
+      width: 19px;
+    }
+  }
+
+  @media screen and (max-width: 369px) {
+    :host {
+        font-size: 11px;
+      }
+
+    .iconContainer {
+      height: 16px;
+      width: 16px;
+    }
+
+    simple-icon {
+      height: 15px;
+      width: 15px;
+    }
+  }
   `;
 
   constructor() {
     super();
     this.weeknumber = 0;
     this.headline = "";
-    this.description ="";
+    this.description = "";
     this.opened = false;
     this.numberofvideos = 0;
     this.numberofreadings = 0;
