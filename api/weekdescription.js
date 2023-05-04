@@ -423,6 +423,210 @@ const weekdescription = [
         "Title": "Information Security Governance and Risk Management & Legal, Regulations, Investigations, and Compliance Quiz",
         "Duration": 30
       }]
+  },
+  {
+    "headline": "Introduction to Python",
+    "description": "Programming now has relevance well beyond just Computer Science. In this module and throughout this course, you will learn not only about programming using Python, but also how to use those skills to solve real, complex problems in future classes, at work, or elsewhere. To ensure this, copious amounts of examples are included, with explanations, throughout the course. You are strongly encouraged not only trace through them, but also experiment with (run, alter, break) them on your own. The assignments are linked to the respective module. Putting time in here will give you the opportunity to solve actual scientific problems and challenge you in a way that that will not only help you make use of the skills we will discuss in lecture, but also to leave you with that oh-so-satisfying feeling of having conquered the challenge when you are done!.",
+    "videos": [
+  {
+      "Title": "Introduction to Python",
+      "Duration": 15
+  },
+  {
+    "Title": "Working with SymPy",
+    "Duration": 8
+  }],
+    "readings": [
+      {
+        "Title": "Options for Using Python",
+        "Duration": 10
+      },
+      {
+        "Title": "Data Types and Variables in Python",
+        "Duration": 10
+      },
+      {
+        "Title": "Operators and Expressions in Python",
+        "Duration": 10
+      },
+      {
+        "Title": "SymPy Basics",
+        "Duration": 10
+      }
+    ],
+    "quizzes": [
+      {
+        "Title": "Introduction to Python and SymPy",
+        "Duration": 30
+      }]
+  },
+  {
+    "headline": "Functions",
+    "description": "Functions arise whenever one quantity depends on another. Mathematically speaking, a function is a rule that assigns to each element x in a set D (called the domain) exactly one element, called f(x), in a set called the range. Because we continually make theories about dependencies between quantities in nature and society, functions are important tools in the construction of mathematical models. In this module, we will learn the theory of functions, see many examples and their graphs, as well as apply these functions. We will learn how to implement these functions in Python as well.",
+    "videos": [
+  {
+      "Title": "Theory: Functions",
+      "Duration": 13
+  },
+  {
+    "Title": "Theory: More about Functions",
+    "Duration": 18
+  },
+  {
+    "Title": "Theory: Graphing and Composition",
+    "Duration": 12
+  },
+  {
+    "Title": "Python: Graphing Functions",
+    "Duration": 7
+  },
+  {
+    "Title": "Python: Interactive Quadratic Calculator",
+    "Duration": 9
+  },
+  {
+    "Title": "Theory: Exponential Functions",
+    "Duration": 21
+  },
+  {
+    "Title": "Theory: Logarithmic Functions",
+    "Duration": 14
+  },
+  {
+    "Title": "Theory: The Natural Logarithm",
+    "Duration": 16
+  },
+  {
+    "Title": "Python: Exponentials and Logarithms",
+    "Duration": 8
+  }
+],
+    "readings": [
+      {
+        "Title": "Functions and Linear Functions",
+        "Duration": 10
+      },
+      {
+        "Title": "Functions in Python",
+        "Duration": 10
+      },
+      {
+        "Title": "Sample Problems - Introduction to Functions",
+        "Duration": 10
+      },
+      {
+        "Title": "Exponential and Logarithmic Functions",
+        "Duration": 10
+      },
+      {
+        "Title": "Exponents and Logarithms in SymPy",
+        "Duration": 10
+      },
+      {
+        "Title": "Solving Equations in SymPy",
+        "Duration": 10
+      },
+      {
+        "Title": "Sample Problems - Exponential and Logarithmic Functions",
+        "Duration": 10
+      }],
+    "quizzes": [
+      {
+        "Title": "Introduction to Functions",
+        "Duration": 30
+      },
+      {
+        "Title": "Exponential and Logarithmic Functions",
+        "Duration": 30
+      }]
+  },
+  {
+    "headline": "Rates of Change and the Derivative",
+    "description": "Calculus is the science of measuring change. Early in its history, its tools were developed to solve problems involving the position, velocity, and acceleration of moving objects. Prior to the development of calculus, there was no way to express this change in a variable. In this section, we introduce the notion of limits to develop the derivative of a function. The derivative, commonly denoted as f'(x), will measure the instantaneous rate of change of a function at a certain point x = a. This number f'(a), when defined, will be graphically represented as the slope of the tangent line to a curve. We will see in this module how to find limits and derivatives both analytically and using Python.",
+    "videos": [
+  {
+      "Title": "Theory: Introduction to Limits",
+      "Duration": 19
+  },
+  {
+    "Title": "Theory: Limits Involving Infinity",
+    "Duration": 16
+  },
+  {
+    "Title": "Theory: One-Sided Limits",
+    "Duration": 14
+  },
+  {
+    "Title": "Examples to Find Limits",
+    "Duration": 16
+  },
+  {
+    "Title": "Python: Finding Limits",
+    "Duration": 7
+  },
+  {
+    "Title": "Theory: Derivatives",
+    "Duration": 17
+  },
+  {
+    "Title": "Examples: Finding Derivatives using Limits",
+    "Duration": 16
+  },
+  {
+    "Title": "Theory: Using Limits to Find the Slope of the Tangent Line",
+    "Duration": 13
+  },
+  {
+    "Title": "Theory: Higher Derivatives",
+    "Duration": 15
+  },
+  {
+    "Title": "Theory: The Derivative as a Function",
+    "Duration": 15
+  },
+  {
+    "Title": "Python: Finding Derivatives using Sympy",
+    "Duration": 8
+  }
+],
+    "readings": [
+      {
+        "Title": "Lists and Tuples in Python",
+        "Duration": 10
+      },
+      {
+        "Title": "Limits and Rates of Change",
+        "Duration": 10
+      },
+      {
+        "Title": "Limits and Rates of Change in SymPy",
+        "Duration": 10
+      },
+      {
+        "Title": "Sample Problems - Limits and Rates of Change",
+        "Duration": 10
+      },
+      {
+        "Title": "The Derivative",
+        "Duration": 10
+      },
+      {
+        "Title": "Derivatives in SymPy",
+        "Duration": 10
+      },
+      {
+        "Title": "Sample Problems - The Derivative",
+        "Duration": 10
+      }],
+    "quizzes": [
+      {
+        "Title": "Limits and Rates of Change",
+        "Duration": 30
+      },
+      {
+        "Title": "The Derivative",
+        "Duration": 30
+      }]
   }
 ];
 
